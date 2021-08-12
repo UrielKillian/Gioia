@@ -18,6 +18,11 @@ async function bootstrap() {
     .setTitle('Gioia API')
     .setDescription('Gioia API')
     .setVersion('1.0.0')
+    .setBasePath('api')
+    .addBearerAuth(
+      { type: 'http', scheme: 'bearer', bearerFormat: 'JWT' },
+      'access-token',
+    )
     .build();
 
   const document = SwaggerModule.createDocument(app, options);

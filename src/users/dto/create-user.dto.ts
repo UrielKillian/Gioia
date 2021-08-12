@@ -7,6 +7,9 @@ export class CreateUserDto {
   @IsString()
   readonly cellphone: string;
 
+  @IsString()
+  readonly username: string;
+
   @IsEmail()
   readonly email: string;
 
